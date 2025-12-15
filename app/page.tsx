@@ -37,80 +37,8 @@ export default function AWSCommunityDay() {
     return () => clearInterval(timer);
   }, []);
 
-  const speakers = [
-    {
-      name: "Dr. Priya Sharma",
-      title: "AI Researcher, AWS India",
-      role: "AI Researcher",
-      company: "AWS India",
-      topic: "Future of AI in Cloud Computing",
-      track: "Gen-AI/Agentic AI",
-      description: "Dr. Priya Sharma is a leading AI Researcher at AWS India with extensive experience in machine learning and cloud technologies.",
-      img: "/img/shafreen.png",
-      image: "PS",
-      keynote: true
-    },
-    {
-      name: "Arjun Menon",
-      title: "Cloud Architect, TCS",
-      role: "Cloud Architect",
-      company: "TCS",
-      topic: "Enterprise Cloud Migration Strategies",
-      track: "Serverless & Dev Tools",
-      description: "Arjun Menon is a seasoned Cloud Architect at TCS specializing in large-scale cloud migrations and architecture design.",
-      img: "/img/ric.png",
-      image: "AM",
-      keynote: false
-    },
-    {
-      name: "Sneha Patel",
-      title: "Developer Advocate, AWS",
-      role: "Developer Advocate",
-      company: "AWS",
-      topic: "Building Secure Applications on AWS",
-      track: "Security",
-      description: "Sneha Patel is a Developer Advocate at AWS, passionate about helping developers build secure and scalable applications.",
-      img: "/img/shafreen.png",
-      image: "SP",
-      keynote: true
-    },
-    {
-      name: "Manoj Kumar",
-      title: "Senior Architect, AWS",
-      role: "Senior Architect",
-      company: "Amazon Web Services",
-      topic: "Improving DevOps with Generative AI",
-      track: "Gen-AI/Agentic AI",
-      description: "Manoj Kumar is a Senior Architect at Amazon Web Services with extensive experience in AI and workplace collaboration technologies.",
-      img: "/img/ric.png",
-      image: "MK",
-      keynote: false
-    },
-    {
-      name: "Aadhityaa",
-      title: "AI Developer, EY",
-      role: "AI Developer",
-      company: "EY",
-      topic: "Building Structured AI Agent Systems",
-      track: "Gen-AI/Agentic AI",
-      description: "Aadhityaa is an AI Developer at EY, specializing in building structured AI agent systems using AWS Strands SDK.",
-      img: "/img/ric.png",
-      image: "AA",
-      keynote: false
-    },
-    {
-      name: "N S Midhun",
-      title: "Lead Cloud Security, HID Global",
-      role: "Lead Cloud Security",
-      company: "HID Global Pvt Ltd",
-      topic: "DevSecOps & AWS Security",
-      track: "Security",
-      description: "N S Midhun is a Lead Cloud Security expert at HID Global, specializing in DevSecOps practices.",
-      img: "/img/ric.png",
-      image: "NM",
-      keynote: false
-    }
-  ];
+  // Speakers will be revealed soon!
+  const speakers: any[] = [];
 
   const schedule = {
     common: [
@@ -123,22 +51,25 @@ export default function AWSCommunityDay() {
     ],
     tracks: {
       "Gen-AI/Agentic AI": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "Building AI Agents with AWS", speaker: "Manoj Kumar" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Structured AI Systems", speaker: "Aadhityaa" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Private GPT with Bedrock", speaker: "Saravanan" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "AI Workshop", speaker: "Panel Discussion" }
+        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
+        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
+        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
       ],
       "Serverless & Dev Tools": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "Serverless Architecture Patterns", speaker: "Sujoy" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Amazon Q CLI Deep Dive", speaker: "Vinolin" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Lambda Best Practices", speaker: "Expert Panel" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "Hands-on Workshop", speaker: "Interactive Session" }
+        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
+        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
+        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
       ],
       "Security": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "DevSecOps with AWS", speaker: "N S Midhun" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Cloud Security Best Practices", speaker: "Security Expert" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Zero Trust Architecture", speaker: "Panel Discussion" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "Security Workshop", speaker: "Hands-on Lab" }
+        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
+        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
+        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
       ]
     }
   };
@@ -146,8 +77,8 @@ export default function AWSCommunityDay() {
   const registrationPlans = [
     {
       name: "Student Pass",
-      price: "₹299",
-      originalPrice: "₹499",
+      price: "₹150",
+      originalPrice: "₹299",
       features: [
         "Full day access to all sessions",
         "Lunch & refreshments included",
@@ -158,38 +89,6 @@ export default function AWSCommunityDay() {
       ],
       popular: true,
       color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "Professional Pass",
-      price: "₹799",
-      originalPrice: "₹1299",
-      features: [
-        "Everything in Student Pass",
-        "Priority seating",
-        "Exclusive networking session",
-        "Professional certificate",
-        "Premium AWS swag",
-        "1-on-1 mentor sessions",
-        "Workshop materials"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      name: "Team/Group Pass",
-      price: "₹2499",
-      originalPrice: "₹3999",
-      features: [
-        "5 Professional Passes",
-        "Group photo with speakers",
-        "Team lunch with organizers",
-        "Bulk certificate generation",
-        "Custom team swag",
-        "Dedicated team seating",
-        "Group workshop sessions"
-      ],
-      popular: false,
-      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -537,6 +436,7 @@ export default function AWSCommunityDay() {
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
+            {/* Amritha */}
             <motion.div
               className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
               variants={cardVariant}
@@ -544,32 +444,53 @@ export default function AWSCommunityDay() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <img
-                src="/img/panimalar.png"
-                alt="Panimalar Engineering College"
-                className="w-20 h-20 object-contain"
-              />
-            </motion.div>
-            <div className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer hover:rotate-12">
-              <img
-                src="/img/sist.jpg"
-                alt="Sathyabama Institute of Science and Technology"
-                className="w-20 h-20 object-contain rounded-full"
-              />
-            </div>
-            <div className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer hover:rotate-12">
-              <img
-                src="/img/cit.jpg"
-                alt="Chennai Institute of Technology"
-                className="w-20 h-20 object-contain rounded-full"
-              />
-            </div>
-            <div className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer hover:rotate-12">
-              <img
-                src="/img/amirta.jpg"
+                src="/img/WhatsApp Image 2025-12-08 at 11.07.53 AM.jpeg"
                 alt="Amrita Vishwa Vidyapeetham"
                 className="w-20 h-20 object-contain rounded-full"
               />
-            </div>
+            </motion.div>
+
+            {/* CIT */}
+            <motion.div
+              className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
+              variants={cardVariant}
+              whileHover={{ scale: 1.15, rotate: 12 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                src="/img/WhatsApp Image 2025-12-08 at 11.07.53 AM (1).jpeg"
+                alt="Chennai Institute of Technology"
+                className="w-20 h-20 object-contain rounded-full"
+              />
+            </motion.div>
+
+            {/* Panimalar */}
+            <motion.div
+              className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
+              variants={cardVariant}
+              whileHover={{ scale: 1.15, rotate: 12 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                src="/img/WhatsApp Image 2025-12-08 at 11.07.54 AM.jpeg"
+                alt="Panimalar Engineering College"
+                className="w-20 h-20 object-contain rounded-full"
+              />
+            </motion.div>
+
+            {/* Sathyabama */}
+            <motion.div
+              className="group w-32 h-32 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
+              variants={cardVariant}
+              whileHover={{ scale: 1.15, rotate: 12 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                src="/img/WhatsApp Image 2025-12-08 at 11.07.54 AM (1).jpeg"
+                alt="Sathyabama Institute of Science and Technology"
+                className="w-20 h-20 object-contain rounded-full"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -648,7 +569,7 @@ export default function AWSCommunityDay() {
             </p>
           </motion.div>
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="flex justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -753,63 +674,87 @@ export default function AWSCommunityDay() {
             </p>
           </motion.div>
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="flex justify-center items-center min-h-[400px]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
+            variants={fadeInUp}
           >
-            {speakers.map((speaker, idx) => (
+            <motion.div
+              className="relative p-12 bg-gradient-to-br from-slate-800/90 to-purple-900/40 border-2 border-orange-500/50 rounded-3xl max-w-2xl text-center"
+              initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02, borderColor: "rgba(249, 115, 22, 0.8)" }}
+            >
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
+              <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
+
+              {/* Icon */}
               <motion.div
-                key={idx}
-                className={`relative rounded-2xl overflow-hidden shadow-md bg-gradient-to-br from-slate-800/80 to-purple-900/30 border ${speaker.keynote ? "border-2 border-yellow-400" : "border-purple-500/20"
-                  }`}
-                variants={cardVariant}
-                whileHover={{ scale: 1.05, y: -10, borderColor: speaker.keynote ? "rgba(250, 204, 21, 0.6)" : "rgba(249, 115, 22, 0.5)" }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="mb-6 flex justify-center"
+                animate={{
+                  rotate: [0, 10, -10, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
               >
-                <img
-                  src={speaker.img}
-                  alt={speaker.name}
-                  className="w-full h-64 object-cover"
-                />
-
-                {/* Speaker Details */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-1">
-                    {speaker.name}{" "}
-                    {speaker.keynote && (
-                      <span className="inline-flex items-center text-yellow-400 ml-2">
-                        <Crown className="w-5 h-5" />
-                      </span>
-                    )}
-                  </h3>
-                  <p className="text-orange-400 text-sm font-semibold mb-1">{speaker.title}</p>
-
-                  <div className="bg-slate-900/50 p-4 rounded-lg mb-3 border border-purple-500/10 mt-4">
-                    <p className="text-gray-300 text-sm font-semibold mb-2">📢 Topic:</p>
-                    <p className="text-purple-300 text-sm mb-2">{speaker.topic}</p>
-                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${speaker.track === 'Gen-AI/Agentic AI' ? 'bg-purple-500/20 text-purple-300' :
-                      speaker.track === 'Serverless & Dev Tools' ? 'bg-blue-500/20 text-blue-300' :
-                        'bg-red-500/20 text-red-300'
-                      }`}>
-                      {speaker.track}
-                    </span>
-                  </div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{speaker.description}</p>
-                </div>
-
-                {/* Keynote badge overlay */}
-                {speaker.keynote && (
-                  <div className="absolute top-3 left-3 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                    Keynote Speaker
-                  </div>
-                )}
-
-                {/* Hover highlight effect */}
-                <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-300 bg-yellow-100/10 pointer-events-none"></div>
+                <Star className="text-yellow-400 w-20 h-20" />
               </motion.div>
-            ))}
+
+              {/* Main heading */}
+              <h3 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-300 to-purple-400 mb-4">
+                🎤 Coming Soon!
+              </h3>
+
+              {/* Subheading */}
+              <p className="text-2xl text-white font-bold mb-4">
+                Our Amazing Speaker Lineup
+              </p>
+
+              {/* Description */}
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                We're curating an incredible lineup of industry experts, AWS professionals, and thought leaders.
+                Get ready to learn from the best in the cloud computing world!
+              </p>
+
+              {/* Mystery counter */}
+              <div className="flex justify-center gap-4 mb-6">
+                <div className="bg-slate-900/50 px-6 py-3 rounded-lg border border-purple-500/30">
+                  <div className="text-3xl font-bold text-orange-400">15+</div>
+                  <div className="text-xs text-gray-400">Speakers</div>
+                </div>
+                <div className="bg-slate-900/50 px-6 py-3 rounded-lg border border-purple-500/30">
+                  <div className="text-3xl font-bold text-purple-400">3</div>
+                  <div className="text-xs text-gray-400">Tracks</div>
+                </div>
+              </div>
+
+              {/* Call to action */}
+              <motion.div
+                className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-500 rounded-full text-white font-bold"
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(249, 115, 22, 0.5)",
+                    "0 0 40px rgba(168, 85, 247, 0.5)",
+                    "0 0 20px rgba(249, 115, 22, 0.5)"
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              >
+                ✨ Stay Tuned for the Big Reveal! ✨
+              </motion.div>
+            </motion.div>
           </motion.div>
           <div className="text-center mt-12">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 mx-auto">
@@ -930,13 +875,11 @@ export default function AWSCommunityDay() {
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
                     <div className="text-purple-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
-                    <div className="text-white text-sm font-medium">Building AI Agents with AWS</div>
-                    <div className="text-gray-400 text-xs">Manoj Kumar</div>
+                    <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
                     <div className="text-purple-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
-                    <div className="text-white text-sm font-medium">Structured AI Systems</div>
-                    <div className="text-gray-400 text-xs">Aadhityaa</div>
+                    <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
@@ -948,13 +891,11 @@ export default function AWSCommunityDay() {
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
                     <div className="text-purple-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
-                    <div className="text-white text-sm font-medium">Private GPT with Bedrock</div>
-                    <div className="text-gray-400 text-xs">Saravanan</div>
+                    <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
                     <div className="text-purple-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
-                    <div className="text-white text-sm font-medium">AI Workshop</div>
-                    <div className="text-gray-400 text-xs">Panel Discussion</div>
+                    <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
               </motion.div>
@@ -974,13 +915,11 @@ export default function AWSCommunityDay() {
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
                     <div className="text-blue-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
-                    <div className="text-white text-sm font-medium">Serverless Architecture Patterns</div>
-                    <div className="text-gray-400 text-xs">Sujoy</div>
+                    <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
                     <div className="text-blue-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
-                    <div className="text-white text-sm font-medium">Amazon Q CLI Deep Dive</div>
-                    <div className="text-gray-400 text-xs">Vinolin</div>
+                    <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
@@ -992,13 +931,11 @@ export default function AWSCommunityDay() {
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
                     <div className="text-blue-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
-                    <div className="text-white text-sm font-medium">Lambda Best Practices</div>
-                    <div className="text-gray-400 text-xs">Expert Panel</div>
+                    <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
                     <div className="text-blue-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
-                    <div className="text-white text-sm font-medium">Hands-on Workshop</div>
-                    <div className="text-gray-400 text-xs">Interactive Session</div>
+                    <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
               </motion.div>
@@ -1018,13 +955,11 @@ export default function AWSCommunityDay() {
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
                     <div className="text-red-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
-                    <div className="text-white text-sm font-medium">DevSecOps with AWS</div>
-                    <div className="text-gray-400 text-xs">N S Midhun</div>
+                    <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
                     <div className="text-red-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
-                    <div className="text-white text-sm font-medium">Cloud Security Best Practices</div>
-                    <div className="text-gray-400 text-xs">Security Expert</div>
+                    <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
@@ -1036,13 +971,11 @@ export default function AWSCommunityDay() {
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
                     <div className="text-red-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
-                    <div className="text-white text-sm font-medium">Zero Trust Architecture</div>
-                    <div className="text-gray-400 text-xs">Panel Discussion</div>
+                    <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
                     <div className="text-red-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
-                    <div className="text-white text-sm font-medium">Security Workshop</div>
-                    <div className="text-gray-400 text-xs">Hands-on Lab</div>
+                    <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
               </motion.div>
@@ -1141,34 +1074,80 @@ export default function AWSCommunityDay() {
             variants={fadeInUp}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Sponsors</h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
               Thank you to our amazing sponsors who make this event possible
             </p>
           </motion.div>
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="flex justify-center items-center min-h-[400px]"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
           >
-            {sponsors.map((sponsor, idx) => (
+            <motion.div
+              className="relative p-12 bg-gradient-to-br from-slate-800/90 to-purple-900/40 border-2 border-yellow-500/50 rounded-3xl max-w-2xl text-center"
+              initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02, borderColor: "rgba(234, 179, 8, 0.8)" }}
+            >
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
+              <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
+
+              {/* Icon */}
               <motion.div
-                key={idx}
-                className="group p-8 bg-gradient-to-br from-slate-800/80 to-purple-900/30 border border-purple-500/20 rounded-2xl text-center cursor-pointer"
-                variants={cardVariant}
-                whileHover={{ scale: 1.05, y: -10, borderColor: "rgba(249, 115, 22, 0.5)" }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="mb-6 flex justify-center"
+                animate={{
+                  rotate: [0, 10, -10, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
               >
-                <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-500">
-                  <img src={sponsor.logo} alt={sponsor.name} className="w-16 h-16 object-contain" />
-                </div>
-                <h3 className="text-white font-bold text-xl mb-2">{sponsor.name}</h3>
-                <span className="inline-block px-3 py-1 bg-gradient-to-r from-orange-500 to-purple-500 rounded-full text-white text-sm font-medium">
-                  {sponsor.tier}
-                </span>
+                <DollarSign className="text-yellow-400 w-20 h-20" />
               </motion.div>
-            ))}
+
+              {/* Main heading */}
+              <h3 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 mb-4">
+                🎉 Coming Soon!
+              </h3>
+
+              {/* Subheading */}
+              <p className="text-2xl text-white font-bold mb-4">
+                Our Amazing Sponsors
+              </p>
+
+              {/* Description */}
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                We're finalizing partnerships with industry-leading companies who share our passion for cloud innovation.
+                Get ready to meet the sponsors who make AWS Community Day Chennai possible!
+              </p>
+
+              {/* Call to action */}
+              <motion.div
+                className="inline-block px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-white font-bold"
+                animate={{
+                  boxShadow: [
+                    "0 0 20px rgba(234, 179, 8, 0.5)",
+                    "0 0 40px rgba(249, 115, 22, 0.5)",
+                    "0 0 20px rgba(234, 179, 8, 0.5)"
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              >
+                ✨ We'll Reveal Them Soon! ✨
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
