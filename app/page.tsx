@@ -295,7 +295,7 @@ export default function AWSCommunityDay() {
             transition={{ delay: 0.2, duration: 0.5 }}
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-orange-300 text-sm font-bold">📍 Chennai, India • January 24, 2026</span>
+            <span className="text-orange-300 text-sm font-bold">📍 Chennai, India • January 23, 2026</span>
           </motion.div>
           <motion.h1
             className="text-6xl md:text-8xl font-extrabold text-white mb-6 leading-tight"
