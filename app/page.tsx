@@ -37,39 +37,110 @@ export default function AWSCommunityDay() {
     return () => clearInterval(timer);
   }, []);
 
-  // Speakers will be revealed soon!
-  const speakers: any[] = [];
+  // Featured Speakers
+  const speakers = [
+    {
+      name: "Tracy Wang",
+      title: "Community Program Manager",
+      company: "AWS",
+      image: "/img/Tracy Wang.png"
+    },
+    {
+      name: "Ilanchezhian Ganesamurthy",
+      title: "AWS HERO - Director",
+      company: "Tietoevry",
+      image: "/img/Ilanchezhian Ganesamurthy.png"
+    },
+    {
+      name: "Muthukumar Oman",
+      title: "AWS Community Builder - Vice President - Head of Engineering",
+      company: "Intellect Design Arena Ltd",
+      image: "/img/Muthukumar Oman.png"
+    },
+    {
+      name: "Keerthivasan Kannan",
+      title: "AWS Community Builder - Senior Cloud & Devops Engineer",
+      company: "",
+      image: "/img/Keerthivasan Kannan.png"
+    },
+    {
+      name: "Vijayaraghavan Vashudevan",
+      title: "AWS Community Builder - Associate Vice President",
+      company: "",
+      image: "/img/Vijayaraghavan Vashudevan.png"
+    },
+    {
+      name: "Raji Krishnamoorthy",
+      title: "AWS Community Builder - AI Architect",
+      company: "TCS",
+      image: "/img/Raji Krishnamoorthy.png"
+    },
+    {
+      name: "Abinaya S V",
+      title: "AWS Community Builder",
+      company: "",
+      image: "/img/Abinaya S V.png"
+    },
+    {
+      name: "Varsha Verma",
+      title: "AWS Community Builder - Infra Cloud Specialist",
+      company: "Accenture",
+      image: "/img/Varsha Verma.png"
+    },
+    {
+      name: "Mohamed Irfan",
+      title: "AppDev Engineer",
+      company: "Presidio",
+      image: "/img/Mohamed Irfan.png"
+    },
+    {
+      name: "To be Revealed",
+      title: "",
+      company: "",
+      image: "/img/to be revealed.png"
+    },
+    {
+      name: "To be Revealed",
+      title: "",
+      company: "",
+      image: "/img/to be revealed.png"
+    },
+    {
+      name: "To be Revealed",
+      title: "",
+      company: "",
+      image: "/img/to be revealed.png"
+    }
+  ];
 
   const schedule = {
     common: [
-      { time: "8:00 AM", endTime: "9:00 AM", event: "Registration & Networking", icon: Users, color: "from-blue-500 to-cyan-500" },
-      { time: "9:00 AM", endTime: "9:30 AM", event: "Opening Ceremony", icon: Rocket, color: "from-orange-500 to-red-500" },
-      { time: "9:30 AM", endTime: "10:30 AM", event: "Keynote Presentation", icon: Zap, color: "from-yellow-500 to-orange-500" },
-      { time: "10:30 AM", endTime: "10:45 AM", event: "Coffee Break", icon: Coffee, color: "from-amber-500 to-yellow-500" },
-      { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", icon: Users, color: "from-green-500 to-teal-500" },
-      { time: "4:30 PM", endTime: "5:00 PM", event: "Closing Ceremony", icon: Heart, color: "from-red-500 to-pink-500" }
+      { time: "9:00 AM", endTime: "10:00 AM", event: "Registrations", icon: Users, color: "from-blue-500 to-cyan-500" },
+      { time: "10:00 AM", endTime: "11:00 AM", event: "Inauguration + Keynotes", icon: Rocket, color: "from-orange-500 to-red-500" },
+      { time: "12:15 PM", endTime: "1:30 PM", event: "Lunch & Networking", icon: Coffee, color: "from-green-500 to-teal-500" },
+      { time: "2:30 PM", endTime: "3:10 PM", event: "Felicitation & Closing Ceremony", icon: Heart, color: "from-red-500 to-pink-500" }
     ],
     tracks: {
       "Gen-AI/Agentic AI": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
-        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
+        { time: "11:15 AM", endTime: "11:45 AM", event: "Session 1", speaker: "" },
+        { time: "11:45 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:15 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:00 PM", event: "Session 3", speaker: "" },
+        { time: "2:00 PM", endTime: "2:30 PM", event: "Session 4", speaker: "" }
       ],
       "Serverless & Dev Tools": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
-        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
+        { time: "11:15 AM", endTime: "11:45 AM", event: "Session 1", speaker: "" },
+        { time: "11:45 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:15 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:00 PM", event: "Session 3", speaker: "" },
+        { time: "2:00 PM", endTime: "2:30 PM", event: "Session 4", speaker: "" }
       ],
       "Security": [
-        { time: "10:45 AM", endTime: "11:30 AM", event: "Session 1", speaker: "" },
-        { time: "11:30 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
-        { time: "12:30 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
-        { time: "1:30 PM", endTime: "2:15 PM", event: "Session 3", speaker: "" },
-        { time: "2:15 PM", endTime: "3:00 PM", event: "Session 4", speaker: "" }
+        { time: "11:15 AM", endTime: "11:45 AM", event: "Session 1", speaker: "" },
+        { time: "11:45 AM", endTime: "12:15 PM", event: "Session 2", speaker: "" },
+        { time: "12:15 PM", endTime: "1:30 PM", event: "Lunch & Networking", speaker: "" },
+        { time: "1:30 PM", endTime: "2:00 PM", event: "Session 3", speaker: "" },
+        { time: "2:00 PM", endTime: "2:30 PM", event: "Session 4", speaker: "" }
       ]
     }
   };
@@ -89,6 +160,79 @@ export default function AWSCommunityDay() {
       ],
       popular: true,
       color: "from-blue-500 to-cyan-500"
+    }
+  ];
+
+  const ticketPlans = [
+    {
+      name: "Early Access: Student Pass",
+      badge: "Early Bird",
+      price: "₹149",
+      features: [
+        "Regular Seating",
+        "Includes full access to all 3 tracks",
+        "Lunch provided",
+        "Attendee IDs, Notepad and Official AWS Pens-provided",
+        "Surprise AWS Swags"
+      ],
+      availableUntil: "1st Jan 2026, 12:00 PM (GMT+05:30)",
+      warning: "⚠️ Limited seats. Price increases after Jan 1.",
+      buttonText: "Register",
+      buttonEnabled: true,
+      popular: true,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Standard Access: Student Pass",
+      badge: "Standard",
+      price: "₹349",
+      features: [
+        "Regular Seating",
+        "Includes full access to all 3 tracks",
+        "Lunch provided",
+        "Attendee IDs, Notepad and Official AWS Pens-provided",
+        "Surprise AWS Swags"
+      ],
+      startsOn: "31st Dec 2025, 12:00 PM (GMT+05:30)",
+      buttonText: "Coming Soon",
+      buttonEnabled: false,
+      popular: false,
+      color: "from-slate-600 to-slate-700"
+    },
+    {
+      name: "Early Access: Professional Pass",
+      badge: "Early Bird",
+      price: "₹299",
+      features: [
+        "Regular Seating",
+        "Includes full access to all 3 tracks",
+        "Lunch provided",
+        "Attendee IDs, Notepad and Official AWS Pens-provided",
+        "Surprise AWS Swags"
+      ],
+      availableUntil: "1st Jan 2026, 12:00 PM (GMT+05:30)",
+      warning: "⚠️ Limited seats. Price increases after Jan 1.",
+      buttonText: "Register",
+      buttonEnabled: true,
+      popular: false,
+      color: "from-orange-500 to-purple-500"
+    },
+    {
+      name: "Standard Access: Professional Pass",
+      badge: "Standard",
+      price: "₹499",
+      features: [
+        "Regular Seating",
+        "Includes full access to all 3 tracks",
+        "Lunch provided",
+        "Attendee IDs, Notepad and Official AWS Pens-provided",
+        "Surprise AWS Swags"
+      ],
+      startsOn: "31st Dec 2025, 12:00 PM (GMT+05:30)",
+      buttonText: "Coming Soon",
+      buttonEnabled: false,
+      popular: false,
+      color: "from-slate-600 to-slate-700"
     }
   ];
 
@@ -553,7 +697,7 @@ export default function AWSCommunityDay() {
         </div>
       </div>
 
-      {/* Registration Section */}
+      {/* Tickets Section */}
       <div id="registration" className="py-24 px-4 bg-slate-800/30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -563,50 +707,100 @@ export default function AWSCommunityDay() {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Registration Plans</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Get Your Tickets</h2>
             <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
               Choose the perfect pass for your AWS learning journey. Early bird pricing available for limited time!
             </p>
           </motion.div>
           <motion.div
-            className="flex justify-center"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            {registrationPlans.map((plan, idx) => (
+            {ticketPlans.map((ticket, idx) => (
               <motion.div
                 key={idx}
-                className={`relative p-8 bg-gradient-to-br from-slate-800/80 to-purple-900/30 border ${plan.popular ? 'border-orange-500/50 ring-2 ring-orange-500/30' : 'border-purple-500/20'} rounded-2xl`}
+                className={`relative p-6 bg-gradient-to-br from-slate-800/90 to-slate-900/40 border-2 ${ticket.popular ? 'border-orange-500/60 shadow-lg shadow-orange-500/20' : 'border-purple-500/30'} rounded-2xl backdrop-blur-sm hover:shadow-2xl transition-all duration-300`}
                 variants={cardVariant}
                 whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                      Most Popular
-                    </span>
+                {/* Badge */}
+                <div className="absolute -top-3 -right-3">
+                  <span className={`${ticket.badge === 'Early Bird' ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-gradient-to-r from-slate-600 to-slate-700'} text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg`}>
+                    {ticket.badge}
+                  </span>
+                </div>
+
+                {/* Popular Badge */}
+                {ticket.popular && (
+                  <div className="absolute -top-3 -left-3">
+                    <Crown className="text-yellow-400" size={28} />
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-white font-bold text-2xl mb-2">{plan.name}</h3>
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-400">{plan.price}</span>
-                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
+
+                {/* Ticket Name */}
+                <div className="mb-4 mt-2">
+                  <h3 className="text-white font-bold text-lg mb-3 leading-tight">{ticket.name}</h3>
+
+                  {/* Price */}
+                  <div className="mb-4">
+                    <span className={`text-4xl font-extrabold ${ticket.popular ? 'text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400' : 'text-white'}`}>
+                      {ticket.price}
+                    </span>
                   </div>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="text-green-400 flex-shrink-0" size={20} />
-                      <span>{feature}</span>
+
+                {/* Features */}
+                <ul className="space-y-2 mb-4 min-h-[180px]">
+                  {ticket.features.map((feature, featureIdx) => (
+                    <li key={featureIdx} className="flex items-start gap-2 text-gray-300 text-sm">
+                      <CheckCircle className="text-green-400 flex-shrink-0 mt-0.5" size={16} />
+                      <span className="leading-tight">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}>
-                  Choose {plan.name}
+
+                {/* Warning/Timing Info */}
+                {ticket.warning && (
+                  <div className="mb-4 p-2 bg-orange-500/10 border border-orange-500/30 rounded-lg">
+                    <p className="text-orange-400 text-xs font-semibold text-center">{ticket.warning}</p>
+                  </div>
+                )}
+
+                {/* Availability Info */}
+                <div className="mb-4">
+                  {ticket.availableUntil && (
+                    <div className="flex items-start gap-2 mb-2">
+                      <Clock className="text-purple-400 flex-shrink-0 mt-0.5" size={16} />
+                      <div>
+                        <p className="text-purple-300 text-xs font-semibold">Available Till:</p>
+                        <p className="text-gray-400 text-xs">{ticket.availableUntil}</p>
+                      </div>
+                    </div>
+                  )}
+                  {ticket.startsOn && (
+                    <div className="flex items-start gap-2">
+                      <Clock className="text-blue-400 flex-shrink-0 mt-0.5" size={16} />
+                      <div>
+                        <p className="text-blue-300 text-xs font-semibold">Starts On:</p>
+                        <p className="text-gray-400 text-xs">{ticket.startsOn}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Button */}
+                <button
+                  className={`w-full py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 ${ticket.buttonEnabled
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg shadow-orange-500/30'
+                    : 'bg-slate-700/50 text-gray-400 cursor-not-allowed'
+                    }`}
+                  disabled={!ticket.buttonEnabled}
+                >
+                  {ticket.buttonText}
                 </button>
               </motion.div>
             ))}
@@ -674,87 +868,64 @@ export default function AWSCommunityDay() {
             </p>
           </motion.div>
           <motion.div
-            className="flex justify-center items-center min-h-[400px]"
+            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
+            variants={staggerContainer}
           >
-            <motion.div
-              className="relative p-12 bg-gradient-to-br from-slate-800/90 to-purple-900/40 border-2 border-orange-500/50 rounded-3xl max-w-2xl text-center"
-              initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
-              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              whileHover={{ scale: 1.02, borderColor: "rgba(249, 115, 22, 0.8)" }}
-            >
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-orange-500 to-purple-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
-              <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-lg opacity-70 animate-pulse"></div>
-
-              {/* Icon */}
+            {speakers.map((speaker, idx) => (
               <motion.div
-                className="mb-6 flex justify-center"
-                animate={{
-                  rotate: [0, 10, -10, 0],
-                  scale: [1, 1.1, 1]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+                key={idx}
+                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/40 border border-purple-500/20 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 overflow-hidden"
+                variants={cardVariant}
+                whileHover={{ y: -10, scale: 1.05, boxShadow: "0 20px 40px rgba(249, 115, 22, 0.25)" }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <Star className="text-yellow-400 w-20 h-20" />
-              </motion.div>
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-purple-500/0 group-hover:from-orange-500/10 group-hover:to-purple-500/10 transition-all duration-300 rounded-2xl"></div>
 
-              {/* Main heading */}
-              <h3 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-300 to-purple-400 mb-4">
-                🎤 Coming Soon!
-              </h3>
-
-              {/* Subheading */}
-              <p className="text-2xl text-white font-bold mb-4">
-                Our Amazing Speaker Lineup
-              </p>
-
-              {/* Description */}
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                We're curating an incredible lineup of industry experts, AWS professionals, and thought leaders.
-                Get ready to learn from the best in the cloud computing world!
-              </p>
-
-              {/* Mystery counter */}
-              <div className="flex justify-center gap-4 mb-6">
-                <div className="bg-slate-900/50 px-6 py-3 rounded-lg border border-purple-500/30">
-                  <div className="text-3xl font-bold text-orange-400">15+</div>
-                  <div className="text-xs text-gray-400">Speakers</div>
+                {/* Speaker Image */}
+                <div className="relative mb-6">
+                  <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-orange-500/20">
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.name}
+                      width={300}
+                      height={300}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {speaker.name === "To be Revealed" && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-purple-900/80 flex items-center justify-center backdrop-blur-sm">
+                        <Star className="text-yellow-400 w-16 h-16 animate-pulse" />
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="bg-slate-900/50 px-6 py-3 rounded-lg border border-purple-500/30">
-                  <div className="text-3xl font-bold text-purple-400">3</div>
-                  <div className="text-xs text-gray-400">Tracks</div>
-                </div>
-              </div>
 
-              {/* Call to action */}
-              <motion.div
-                className="inline-block px-8 py-3 bg-gradient-to-r from-orange-500 to-purple-500 rounded-full text-white font-bold"
-                animate={{
-                  boxShadow: [
-                    "0 0 20px rgba(249, 115, 22, 0.5)",
-                    "0 0 40px rgba(168, 85, 247, 0.5)",
-                    "0 0 20px rgba(249, 115, 22, 0.5)"
-                  ]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
-              >
-                ✨ Stay Tuned for the Big Reveal! ✨
+                {/* Speaker Info */}
+                <div className="relative text-center">
+                  <h3 className="text-white font-bold text-lg mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                    {speaker.name}
+                  </h3>
+                  {speaker.title && (
+                    <p className="text-purple-300 text-sm mb-1 font-medium">
+                      {speaker.title}
+                    </p>
+                  )}
+                  {speaker.company && (
+                    <p className="text-gray-400 text-sm">
+                      {speaker.company}
+                    </p>
+                  )}
+                  {speaker.name === "To be Revealed" && (
+                    <p className="text-gray-400 text-sm italic mt-2">
+                      Announcing Soon
+                    </p>
+                  )}
+                </div>
               </motion.div>
-            </motion.div>
+            ))}
           </motion.div>
           <div className="text-center mt-12">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 mx-auto">
@@ -794,8 +965,8 @@ export default function AWSCommunityDay() {
                 variants={fadeInUp}
               >
                 <Users className="mx-auto mb-2 text-blue-400" size={32} />
-                <div className="text-blue-300 font-bold text-sm mb-1">8:00 AM - 9:00 AM</div>
-                <h4 className="text-white font-bold text-lg">Registration & Networking</h4>
+                <div className="text-blue-300 font-bold text-sm mb-1">9:00 AM - 10:00 AM</div>
+                <h4 className="text-white font-bold text-lg">Registrations</h4>
               </motion.div>
 
               {/* Connector Line */}
@@ -810,39 +981,11 @@ export default function AWSCommunityDay() {
                 variants={fadeInUp}
               >
                 <Rocket className="mx-auto mb-2 text-orange-400" size={32} />
-                <div className="text-orange-300 font-bold text-sm mb-1">9:00 AM - 9:30 AM</div>
-                <h4 className="text-white font-bold text-lg">Opening Ceremony</h4>
+                <div className="text-orange-300 font-bold text-sm mb-1">10:00 AM - 11:00 AM</div>
+                <h4 className="text-white font-bold text-lg">Inauguration + Keynotes</h4>
               </motion.div>
 
-              <div className="w-1 h-8 bg-gradient-to-b from-orange-500/50 to-yellow-500/50"></div>
-
-              {/* Keynote */}
-              <motion.div
-                className="w-full max-w-md p-6 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-2 border-yellow-500/50 rounded-2xl text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-              >
-                <Zap className="mx-auto mb-2 text-yellow-400" size={32} />
-                <div className="text-yellow-300 font-bold text-sm mb-1">9:30 AM - 10:30 AM</div>
-                <h4 className="text-white font-bold text-lg">Keynote Presentation</h4>
-              </motion.div>
-
-              <div className="w-1 h-8 bg-gradient-to-b from-yellow-500/50 to-amber-500/50"></div>
-
-              {/* Coffee Break */}
-              <motion.div
-                className="w-full max-w-md p-6 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border-2 border-amber-500/50 rounded-2xl text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-              >
-                <Coffee className="mx-auto mb-2 text-amber-400" size={32} />
-                <div className="text-amber-300 font-bold text-sm mb-1">10:30 AM - 10:45 AM</div>
-                <h4 className="text-white font-bold text-lg">Coffee Break</h4>
-              </motion.div>
+              <div className="w-1 h-8 bg-gradient-to-b from-orange-500/50 to-purple-500/30"></div>
             </div>
 
             {/* Branch Indicator */}
@@ -874,27 +1017,27 @@ export default function AWSCommunityDay() {
                 </div>
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
-                    <div className="text-purple-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
+                    <div className="text-purple-300 text-xs font-semibold mb-1">11:15 AM - 11:45 AM</div>
                     <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
-                    <div className="text-purple-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
+                    <div className="text-purple-300 text-xs font-semibold mb-1">11:45 AM - 12:15 PM</div>
                     <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
                   <div className="p-4 bg-gradient-to-br from-green-500/20 to-teal-500/20 border-2 border-green-500/50 rounded-lg text-center my-4">
                     <Users className="mx-auto mb-1 text-green-400" size={24} />
-                    <div className="text-green-300 text-xs font-bold mb-1">12:30 PM - 1:30 PM</div>
+                    <div className="text-green-300 text-xs font-bold mb-1">12:15 PM - 1:30 PM</div>
                     <div className="text-white text-sm font-bold">Lunch & Networking</div>
                   </div>
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
-                    <div className="text-purple-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
+                    <div className="text-purple-300 text-xs font-semibold mb-1">1:30 PM - 2:00 PM</div>
                     <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-purple-500/20">
-                    <div className="text-purple-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
+                    <div className="text-purple-300 text-xs font-semibold mb-1">2:00 PM - 2:30 PM</div>
                     <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
@@ -914,27 +1057,27 @@ export default function AWSCommunityDay() {
                 </div>
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
-                    <div className="text-blue-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
+                    <div className="text-blue-300 text-xs font-semibold mb-1">11:15 AM - 11:45 AM</div>
                     <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
-                    <div className="text-blue-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
+                    <div className="text-blue-300 text-xs font-semibold mb-1">11:45 AM - 12:15 PM</div>
                     <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
                   <div className="p-4 bg-gradient-to-br from-green-500/20 to-teal-500/20 border-2 border-green-500/50 rounded-lg text-center my-4">
                     <Users className="mx-auto mb-1 text-green-400" size={24} />
-                    <div className="text-green-300 text-xs font-bold mb-1">12:30 PM - 1:30 PM</div>
+                    <div className="text-green-300 text-xs font-bold mb-1">12:15 PM - 1:30 PM</div>
                     <div className="text-white text-sm font-bold">Lunch & Networking</div>
                   </div>
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
-                    <div className="text-blue-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
+                    <div className="text-blue-300 text-xs font-semibold mb-1">1:30 PM - 2:00 PM</div>
                     <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-blue-500/20">
-                    <div className="text-blue-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
+                    <div className="text-blue-300 text-xs font-semibold mb-1">2:00 PM - 2:30 PM</div>
                     <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
@@ -954,27 +1097,27 @@ export default function AWSCommunityDay() {
                 </div>
                 <div className="space-y-3">
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
-                    <div className="text-red-300 text-xs font-semibold mb-1">10:45 AM - 11:30 AM</div>
+                    <div className="text-red-300 text-xs font-semibold mb-1">11:15 AM - 11:45 AM</div>
                     <div className="text-white text-sm font-medium">Session 1</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
-                    <div className="text-red-300 text-xs font-semibold mb-1">11:30 AM - 12:15 PM</div>
+                    <div className="text-red-300 text-xs font-semibold mb-1">11:45 AM - 12:15 PM</div>
                     <div className="text-white text-sm font-medium">Session 2</div>
                   </div>
 
                   {/* Lunch Break */}
                   <div className="p-4 bg-gradient-to-br from-green-500/20 to-teal-500/20 border-2 border-green-500/50 rounded-lg text-center my-4">
                     <Users className="mx-auto mb-1 text-green-400" size={24} />
-                    <div className="text-green-300 text-xs font-bold mb-1">12:30 PM - 1:30 PM</div>
+                    <div className="text-green-300 text-xs font-bold mb-1">12:15 PM - 1:30 PM</div>
                     <div className="text-white text-sm font-bold">Lunch & Networking</div>
                   </div>
 
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
-                    <div className="text-red-300 text-xs font-semibold mb-1">1:30 PM - 2:15 PM</div>
+                    <div className="text-red-300 text-xs font-semibold mb-1">1:30 PM - 2:00 PM</div>
                     <div className="text-white text-sm font-medium">Session 3</div>
                   </div>
                   <div className="p-3 bg-slate-900/50 rounded-lg border border-red-500/20">
-                    <div className="text-red-300 text-xs font-semibold mb-1">2:15 PM - 3:00 PM</div>
+                    <div className="text-red-300 text-xs font-semibold mb-1">2:00 PM - 2:30 PM</div>
                     <div className="text-white text-sm font-medium">Session 4</div>
                   </div>
                 </div>
@@ -991,8 +1134,8 @@ export default function AWSCommunityDay() {
                 variants={fadeInUp}
               >
                 <Heart className="mx-auto mb-2 text-red-400" size={32} />
-                <div className="text-red-300 font-bold text-sm mb-1">4:30 PM - 5:00 PM</div>
-                <h4 className="text-white font-bold text-lg">Closing Ceremony</h4>
+                <div className="text-red-300 font-bold text-sm mb-1">2:30 PM - 3:10 PM</div>
+                <h4 className="text-white font-bold text-lg">Felicitation & Closing Ceremony</h4>
               </motion.div>
             </div>
           </div>
