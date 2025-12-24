@@ -417,7 +417,10 @@ export default function AWSCommunityDay() {
             <a href="#sponsors" className="text-gray-300 hover:text-orange-400 transition-colors duration-300">Sponsors</a>
             <a href="#faq" className="text-gray-300 hover:text-orange-400 transition-colors duration-300">FAQ</a>
           </div>
-          <button className="bg-gradient-to-r from-orange-500 to-purple-500 hover:from-orange-600 hover:to-purple-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/50">
+          <button
+            className="bg-gradient-to-r from-orange-500 to-purple-500 hover:from-orange-600 hover:to-purple-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/50"
+            onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Register Now
           </button>
         </div>
@@ -480,6 +483,7 @@ export default function AWSCommunityDay() {
               className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(249, 115, 22, 0.4)" }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Rocket size={24} />
               Register Now
@@ -799,6 +803,11 @@ export default function AWSCommunityDay() {
                     : 'bg-slate-700/50 text-gray-400 cursor-not-allowed'
                     }`}
                   disabled={!ticket.buttonEnabled}
+                  onClick={() => {
+                    if (ticket.buttonEnabled) {
+                      window.open('https://konfhub.com/aws-scd-2026-chennai', '_blank');
+                    }
+                  }}
                 >
                   {ticket.buttonText}
                 </button>
@@ -1478,7 +1487,7 @@ export default function AWSCommunityDay() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-300">
                   <Mail size={20} className="text-orange-400" />
-                  <span>hello@awscommunityday.in</span>
+                  <span>vishal.im05@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <MapPin size={20} className="text-purple-400" />
@@ -1486,7 +1495,7 @@ export default function AWSCommunityDay() {
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <Calendar size={20} className="text-pink-400" />
-                  <span>January 24, 2026</span>
+                  <span>January 23, 2026</span>
                 </div>
               </div>
             </div>
